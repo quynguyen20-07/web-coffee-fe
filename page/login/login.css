@@ -1,0 +1,169 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  padding: 40px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 10px;
+  z-index: 1;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.login-box img {
+  margin-bottom: 30px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #1c1c1c;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #353535;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #7d7d7d;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #242424;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #650202;
+  font-size: 12px;
+}
+
+.login-box form #submit {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px;
+  background-color: rgba(56, 27, 27, 0.789);
+  width: 100%;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.login-box #submit:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #650202;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.earth1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  position: relative;
+  animation: rotate 10s linear infinite ease-in-out;
+  position: relative;
+  top: 30px;
+  left: 900px;
+  background-color: rgba(245, 222, 179, 0);
+}
+
+.moon {
+  width: 40px;
+  background-color: rgba(255, 68, 0, 0.385);
+  height: 40px;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbit 5s linear infinite;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translate(100px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translate(100px) rotate(-360deg);
+  }
+}
+
+.social-login button {
+  background-color: rgb(255, 255, 255);
+  width: 10%;
+  border: 0;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.social-login button:first-child {
+  color: blue;
+}
+.social-login button:last-child {
+  color: red;
+}

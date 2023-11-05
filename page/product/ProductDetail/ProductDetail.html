@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./ProductDetail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Document</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="/page/home/home.css" />
+    <link rel="stylesheet" href="/page/home/reponsive_nav.css" />
+    <link
+      rel="stylesheet"
+      href="/page/product/ProductDetail/ProductDetail.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- style -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+   <script src="crypto-js.min.js"></script>
+   <script src="script.js"></script>
+ 
+    <link rel="stylesheet" href="/page/home/home.css" />
+  
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div id="box_search">
+      <div id="product4"></div>
+    </div>
+    <main id="content">
+      <div class="container__productDetail" id="container__productDetail">
+        <!-- photo's area -->
+        <div class="con_item_productDetail con_item_productDetail1">
+          <div class="main__img__box">
+            <img
+              id="main__img"
+              src="/images/img_product/Americano1.jpg"
+              alt="Photo"
+            />
+          </div>
+          <div class="secondary__img">
+            <div class="secodary__img__item">
+              <img
+                id="item__img1"
+                class="item__img"
+                onmouseover="choise_product(this)"
+                src="/images/img_product/Americano2.jpg"
+                alt="Photo"
+              />
+            </div>
+            <div class="secodary__img__item">
+              <img
+                id="item__img2"
+                class="item__img"
+                onmouseover="choise_product(this)"
+                src="/images/img_product/Americano3.jpg"
+                alt="Photo"
+              />
+            </div>
+            <div class="secodary__img__item">
+              <img
+                id="item__img3"
+                class="item__img"
+                onmouseover="choise_product(this)"
+                src="/images/img_product/Americano2.jpg"
+                alt="Photo"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- information of product -->
+        <div class="con_item_productDetail con_item_productDetail2">
+          <h2 id="product__name">Crushed chocolate</h2>
+          <div class="valuate">
+            <div id="rating">
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span><span class="star">&#9734;</span>
+            </div>
+          </div>
+          <div class="discribe">
+            <p>100 riviews</p>
+            <div class="price">
+              <p id="new__price">19.000 VND</p>
+              <p id="old__price">35.000 VND</p>
+            </div>
+            <p id="describe">
+              Crushed chocolate refers to broken or crushed pieces of chocolate
+              commonly used in baking anddesserts. It adds flavor, texture, and
+              visual appeal to treats like cookies, cakes, and ice creams.
+            </p>
+          </div>
+          <div class="qnty__box">
+            <p>Quantity purchased :</p>
+            <div class="btn__box">
+              <button onclick="decrement()">-</button>
+              <input id="input__qty" type="number" min="1" value="1" />
+              <button onclick="increment()">+</button>
+            </div>
+          </div>
+
+          <div class="btn__buy">
+            <button
+       
+              id="product__btn__add"
+              class="btn_add_qtt"
+              type="button"
+            >
+              <img src="/images/img_icon/icon shoping cart.svg" alt="" />
+              Add cart
+            </button>
+            <button
+              id="product__btn__buy"
+              class="btn_add_qtt"
+              type="button"
+            >
+              Buy
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- comment -->
+      <div class="comments">
+        <h2>Comments</h2>
+        <div class="comment-form">
+          <textarea id="comment-input" placeholder="Write a comment"></textarea>
+          <button id="submit-comment-btn" onclick="addComment()">Submit</button>
+        </div>
+        <div class="comment-list" id="comment-list">
+        </div>
+      </div>
+
+      <!-- <script src="/services/order.js"></script> -->
+
+      <div class="comment-list" id="comment-list">
+        <div class="comment">
+          <div class="comment-content">
+            <div class="comment-header">
+              <img
+                class="profile-picture"
+                src="/images/img_icon/user-removebg-preview.png"
+                alt="Profile Picture"
+              />
+              <h4>John Doe</h4>
+            </div>
+            <div class="box_img_comment">
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+            </div>
+            <p>This product is amazing! I love the taste and texture.</p>
+            <div class="comment-rating">
+              <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            </div>
+            <div class="comment-actions">
+              <button class="like-button">
+                <i class="fas fa-thumbs-up"></i> Like</button
+              ><button class="dislike-button">
+                <i class="fas fa-thumbs-down"></i> Dislike
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-content">
+            <div class="comment-header">
+              <img
+                class="profile-picture"
+                src="/images/img_icon/user-removebg-preview.png"
+                alt="Profile Picture"
+              />
+              <h4>Jane Smith</h4>
+            </div>
+            <div class="box_img_comment">
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+            </div>
+            <p>
+              I'm not impressed with this product. It didn't meet my
+              expectations.
+            </p>
+            <div class="comment-rating">
+              <span class="rating">&#9733;&#9733;&#9734;&#9734;&#9734;</span>
+            </div>
+            <div class="comment-actions">
+              <button class="like-button">
+                <i class="fas fa-thumbs-up"></i> Like
+              </button>
+              <button class="dislike-button">
+                <i class="fas fa-thumbs-down"></i> Dislike
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-content">
+            <div class="comment-header">
+              <img
+                class="profile-picture"
+                src="/images/img_icon/user-removebg-preview.png"
+                alt="Profile Picture"
+              />
+              <h4>Emily Johnson</h4>
+            </div>
+            <div class="box_img_comment">
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+            </div>
+            <p>This is an average product. It could be better.</p>
+            <div class="comment-rating">
+              <span class="rating">&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+            </div>
+            <div class="comment-actions">
+              <button class="like-button">
+                <i class="fas fa-thumbs-up"></i> Like
+              </button>
+              <button class="dislike-button">
+                <i class="fas fa-thumbs-down"></i> Dislike
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-content">
+            <div class="comment-header">
+              <img
+                class="profile-picture"
+                src="/images/img_icon/user-removebg-preview.png"
+                alt="Profile Picture"
+              />
+              <h4>Michael Brown</h4>
+            </div>
+            <div class="box_img_comment">
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+            </div>
+            <p>
+              I'm completely satisfied with this product. It exceeded my
+              expectations.
+            </p>
+            <div class="comment-rating">
+              <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="comment-actions">
+              <button class="like-button">
+                <i class="fas fa-thumbs-up"></i> Like
+              </button>
+              <button class="dislike-button">
+                <i class="fas fa-thumbs-down"></i> Dislike
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-content">
+            <div class="comment-header">
+              <img
+                class="profile-picture"
+                src="/images/img_icon/user-removebg-preview.png"
+                alt="Profile Picture"
+              />
+              <h4>Sarah Wilson</h4>
+            </div>
+            <div class="box_img_comment">
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+            </div>
+            <p>
+              I found this product to be disappointing. It didn't live up to the
+              hype.
+            </p>
+            <div class="comment-rating">
+              <span class="rating">&#9733;&#9734;&#9734;&#9734;&#9734;</span>
+            </div>
+            <div class="comment-actions">
+              <button class="like-button">
+                <i class="fas fa-thumbs-up"></i> Like
+              </button>
+              <button class="dislike-button">
+                <i class="fas fa-thumbs-down"></i> Dislike
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="comment-content">
+            <div class="comment-header">
+              <img class="profile-picture" src="/images/img_icon/user-removebg-preview.png" alt="Profile Picture" />
+              <h4>John Doe</h4>
+            </div>
+            <div class="box_img_comment">
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+              <img class="product-image_comment" src="/images/img_product/Americano1.jpg" alt="Product Image" onclick="openModal('/images/img_product/Americano1.jpg')" />
+            </div>
+            <p>This product is amazing! I love the taste and texture.</p>
+            <div class="comment-rating">
+              <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            </div>
+            <div class="comment-actions">
+              <button class="like-button"><i class="fas fa-thumbs-up"></i> Like</button>
+              <button class="dislike-button"><i class="fas fa-thumbs-down"></i> Dislike</button>
+            </div>
+          </div>
+        </div>
+      
+      <!-- comment -->
+      <div id="product2">
+        <!-- Product container -->
+      </div>
+    </main>
+    <script src="/services/productDetail.js"></script>
+    <script src="/services/home.js"></script>
+    <script src="/services/order.js"></script> 
+    <script src="/services/layout.js"></script>
+  </body>
+</html>

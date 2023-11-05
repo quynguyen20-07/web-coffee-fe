@@ -1,0 +1,46 @@
+h1 {
+  text-align: center;
+}
+
+.list_order_admin {
+  margin-top: 20px;
+}
+#header{
+   background-color: #ddd;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #7f4444;
+  color: white;
+  position: sticky;
+  top: 80px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.action-buttons button {
+  margin: 5px;
+}
+#content {
+  margin-top: 150px;
+}

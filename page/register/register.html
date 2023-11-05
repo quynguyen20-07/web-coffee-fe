@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/page/register/register.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="crypto-js.min.js"></script>
+    <script src="script.js"></script>
+    <title>Register form</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <form name="Formfill" onsubmit="return validation()" id="customerForm">
+        <h1>Register</h1>
+        <img src="/images/img_icon/logo_coffe.svg" alt="logo" class="logo" />
+        <div class="input">
+          <p id="result"></p>
+          <div class="input_field">
+            <input
+              type="email"
+              name="Email"
+              placeholder="Email address"
+              id="email"
+              required
+            />
+          </div>
+          <div class="input_field">
+            <input
+              type="password"
+              name="Password"
+              placeholder="Password"
+              id="password"
+              required
+            />
+          </div>
+          <div class="input_field">
+            <input
+              type="password"
+              name="Con_password"
+              placeholder="con_password"
+              id="con_password"
+              required
+            />
+          </div>
+          <div class="checkbox_text">
+            <div class="checkbox_content">
+              <input type="checkbox" id="logCheck" />
+              <label for="logCheck" class="text">Remember password</label>
+            </div>
+          </div>
+          <div class="input_button">
+            <input
+              type="submit"
+              value="Register now"
+              id="button"
+              onclick="validation()"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="popup" id="popup">
+        <i class="fa-regular fa-circle-check icon"></i>
+        <h2>Thank you</h2>
+        <p>Your were Registration Successfully. Thanks!</p>
+        <a href="#"
+          ><button class="button_success" onclick="closeSlize()">OK</button></a
+        >
+      </div>
+    </div>
+    <script src="/services/register.js"></script>
+  </body>
+</html>
